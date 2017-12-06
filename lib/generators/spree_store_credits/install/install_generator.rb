@@ -5,7 +5,7 @@ module SpreeStoreCredits
       class_option :auto_run_migrations, :type => :boolean, :default => false
 
       def add_javascripts
-        append_file 'vendor/assets/javascripts/spree/backend/all.js', "//= require spree/backend/spree_store_credits\n"
+        append_file 'vendor/assets/javascripts/spree/backend/all.coffee', "//= require spree/backend/spree_store_credits\n"
       end
 
       def add_stylesheets
