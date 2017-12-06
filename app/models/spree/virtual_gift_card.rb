@@ -2,8 +2,8 @@ class Spree::VirtualGiftCard < ActiveRecord::Base
   include ActionView::Helpers::NumberHelper
 
   belongs_to :store_credit, class_name: 'Spree::StoreCredit'
-  belongs_to :purchaser, class_name: 'Spree::User'
-  belongs_to :redeemer, class_name: 'Spree::User'
+  belongs_to :purchaser, class_name: Spree.user_class
+  belongs_to :redeemer, class_name: Spree.user_class
   belongs_to :line_item, class_name: 'Spree::LineItem'
   before_create :set_redemption_code, unless: -> { redemption_code }
 

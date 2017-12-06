@@ -13,4 +13,4 @@ module Spree::UserDecorator
   end
 end
 
-Spree::User.include(Spree::UserDecorator)
+Spree.user_class.constantize.include(Spree::UserDecorator)
