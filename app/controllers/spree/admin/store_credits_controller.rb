@@ -68,7 +68,7 @@ module Spree
       private
 
       def load_user
-        @user = Spree.user_class.constantize.find(params[:user_id])
+        @user = Spree.user_class.find(params[:user_id])
       end
 
       def load_categories

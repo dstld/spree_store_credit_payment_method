@@ -10,7 +10,7 @@ class Spree::StoreCredit < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :category, class_name: "Spree::StoreCreditCategory"
-  belongs_to :created_by, class_name: Spree.user_class
+  belongs_to :created_by, class_name: Spree.user_class.name
   belongs_to :credit_type, class_name: 'Spree::StoreCreditType', :foreign_key => 'type_id'
   has_many :store_credit_events
 
